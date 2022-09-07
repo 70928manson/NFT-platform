@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title><%- title %></title>
+    <title>Boostrap Index</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
@@ -44,10 +44,10 @@
                 </form>
               </li>
               <li class="nav-item px-2 px-lg-0">
-                <a class="nav-link py-4 py-lg-6 px-lg-6 px-xxl-7 border-bottom border-lg-start fs-6 fw-bold fs-lg-7 <%- current == 'explore' ? 'active' : '' %>" href="explore.html">探索</a>
+                <a class="nav-link py-4 py-lg-6 px-lg-6 px-xxl-7 border-bottom border-lg-start fs-6 fw-bold fs-lg-7 " href="explore.html">探索</a>
               </li>
               <li class="nav-item px-2 px-lg-0 mb-1 mb-lg-0">
-                <a class="nav-link py-4 py-lg-6 px-lg-6 px-xxl-7 border-lg-start fs-6 fw-bold fs-lg-7 <%- current == '' ? 'active' : '' %>" href="#">市值</a>
+                <a class="nav-link py-4 py-lg-6 px-lg-6 px-xxl-7 border-lg-start fs-6 fw-bold fs-lg-7 " href="#">市值</a>
               </li>
               <li class="nav-item d-none d-lg-block">
                 <a class="nav-link py-4 py-lg-6 px-lg-6 px-xxl-7 border-bottom border-lg-start fs-6 fw-bold fs-lg-7" role="button" data-bs-toggle="modal" data-bs-target="#loginModal">
@@ -82,7 +82,59 @@
     </header>
 
     <main class="main">
-      <%- contents %>
+      
+<div class="container">
+  <h1 class="index__h1">這是一段話</h1>
+  <div class="alert alert-primary" role="alert">
+    A simple primary alert—check it out!
+  </div>
+  <div class="alert alert-secondary" role="alert">
+    A simple secondary alert—check it out!
+  </div>
+  <div class="alert alert-success" role="alert">
+    A simple success alert—check it out!
+  </div>
+  <div class="alert alert-danger" role="alert">
+    A simple danger alert—check it out!
+  </div>
+  <div class="alert alert-warning" role="alert">
+    A simple warning alert—check it out!
+  </div>
+  <div class="alert alert-info" role="alert">
+    A simple info alert—check it out!
+  </div>
+  <div class="alert alert-light" role="alert">
+    A simple light alert—check it out!
+  </div>
+  <div class="alert alert-dark" role="alert">
+    A simple dark alert—check it out!
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
     </main>
 
     <div class="bg-secondary w-100 h-1 mb-2"></div>
