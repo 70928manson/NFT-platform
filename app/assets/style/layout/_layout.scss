@@ -1,0 +1,89 @@
+.logo {
+    height: 18px;
+    @include media-breakpoint-up(lg) {
+        height: auto;
+    }
+}
+
+.nav {
+    &-link {
+        color: $black;
+        &:hover {
+            color: $primary;
+        }
+    }
+}
+
+.active {
+    color: $link-hover-color;
+}
+
+.header {
+    &-line {
+        top: 52px;
+        @include media-breakpoint-up(lg) {
+            top: 104px;
+        }
+    }
+
+    .fa-solid {
+        width: 18px;
+    }
+
+    &-search-bar {
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        .form-control {
+            font-size: $small-font-size;
+        }
+    }
+}
+// .navbar {
+//     position: fixed;
+//     width: 100%;
+//     top: 0;
+//     left: 0;
+//     z-index: 10;
+
+//     .logo {
+//         width: 190px;
+//         height: 40px;
+//         text-indent: 101%;
+//         overflow: hidden;
+//         white-space: nowrap;
+//         background-image: url("../images/logo.svg");
+//         background-repeat: no-repeat;
+//         background-position: center center;
+//         box-sizing: content-box;
+//         margin-bottom: 0;
+//         cursor: pointer;
+
+//         a{
+//             display: block;
+//             height: 100%;
+//         }
+    
+//         // @include lg{
+//         //     width: 85px;
+//         //     height: 18px;
+//         // }
+//     }
+//     // 清除多餘高度
+//     a[class^="navbar"] {
+//         line-height: 1;
+//     }
+//     // 清除多餘高度
+//     .navbar-toggler {
+//         border: 0;
+//         font-size: 0;
+//     }
+// }
+
+// .main {
+//     padding-top: 6.5rem;
+  
+//     // @include lg {
+//     //   padding-top: 5.625rem;
+//     // }
+//   }

@@ -6,53 +6,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><%- title %></title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
     <link rel="stylesheet" href="./assets/style/all.css">
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+    <header class="sticky-top header">
+      <nav class="navbar navbar-expand-lg py-0 bg-light">
+        <div class="container-fluid container-lg px-0 px-lg-2">
+          <h1 class="mb-0 py-3 py-lg-5 px-2 px-lg-0">
+            <a class="navbar-brand d-block lh-1 p-0 flex-grow-1" href="index.html">
+              <img src="assets/images/logo.svg" class="img-fluid logo" alt="logo">
+            </a>
+          </h1>
+          <div>
+            <a class="text-secondary py-3 me-4 d-lg-none header-search" role="button">
+              <i class="fa-solid fa-magnifying-glass align-middle fs-6"></i>
+            </a>
+            <a class="navbar-toggler border-0 text-secondary py-3 header-menu" role="button" data-bs-toggle="collapse" data-bs-target="#menu "aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fa-solid fa-bars align-middle fs-6"></i>
+            </a>
+            <a class="navbar-toggler border-0 text-secondary py-3 header-close d-none" role="button" data-bs-toggle="collapse" data-bs-target="#menu "aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fa-solid fa-xmark align-middle fs-6"></i>
+            </a>
+          </div>
+    
+          <div class="collapse navbar-collapse flex-grow-0 bg-white bg-lg-light" id="menu">
+            <ul class="navbar-nav me-auto mb-4 mb-lg-0 text-center">
+              <li class="nav-item d-none d-lg-flex">
+                <form class="d-flex border-lg-start">
+                  <input class="form-control bg-light border-0" type="search" placeholder="搜尋作品名稱、藝術家名稱" aria-label="Search">
+                  <a class="nav-link py-4 py-lg-6 px-lg-7 border-0" href="#">
+                    <i class="fa-solid fa-magnifying-glass align-middle fs-6"></i>
+                  </a>
+                </form>
+              </li>
+              <li class="nav-item px-2 px-lg-0">
+                <a class="nav-link py-4 py-lg-6 px-lg-6 px-xxl-7 border-bottom border-lg-start fs-6 fw-bold fs-lg-7 <%- current == 'explore' ? 'active' : '' %>" href="explore.html">探索</a>
+              </li>
+              <li class="nav-item px-2 px-lg-0 mb-1 mb-lg-0">
+                <a class="nav-link py-4 py-lg-6 px-lg-6 px-xxl-7 border-lg-start fs-6 fw-bold fs-lg-7 <%- current == '' ? 'active' : '' %>" href="#">市值</a>
+              </li>
+              <li class="nav-item d-none d-lg-block">
+                <a class="nav-link py-4 py-lg-6 px-lg-6 px-xxl-7 border-bottom border-lg-start fs-6 fw-bold fs-lg-7" role="button" data-bs-toggle="modal" data-bs-target="#loginModal">
+                  <i class="fa-solid fa-wallet align-middle"></i>
+                </a>
+              </li>
+              <li class="nav-item px-2 px-lg-0 d-lg-none mb-1 mb-lg-0">
+                <a class="nav-link py-3 py-lg-4 border fs-6 btn-orange" role="button" data-bs-toggle="modal" data-bs-target="#loginModal">
+                  連結錢包
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="bg-secondary w-100 position-absolute h-1 header-line"></div>
+      </nav>
+        
+      <!-- 搜尋 -->
+      <div class="header-search-bar w-100 d-none bg-light">
+        <div class="container-fluid">
+          <form class="d-flex align-items-center">
+            <a class="py-3 border-0 lh-1 header-search" href="#">
+              <i class="fa-solid fa-angle-left align-middle fs-6"></i>
+            </a>
+            <input class="form-control bg-light border-0" type="search" placeholder="搜尋作品名稱、藝術家名稱" aria-label="Search">
+            <a class="py-3 border-0 lh-1 header-search" href="#">
+              <i class="fa-solid fa-magnifying-glass align-middle fs-6"></i>
+            </a>
           </form>
         </div>
       </div>
-    </nav>
+    </header>
 
-    <%- contents %>
+    <main class="main">
+      <%- contents %>
+    </main>
 
-    <footer class="footer">
-      footer
+    <div class="bg-secondary w-100 h-1 mb-2"></div>
+    <footer class="border-top border-4">
+        <div class="container">
+            <p class="text-secondary text-center py-4">© ART NFT. All Rights Reserved</p>
+        </div>
     </footer>
+
+    <!--套件區-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <!-- 視差滾動 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>
