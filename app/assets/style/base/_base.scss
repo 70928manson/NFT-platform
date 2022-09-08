@@ -1,30 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Paytone+One&family=Squada+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Paytone+One&family=Squada+One&display=swap");
 
-// 全站樣式
+html,
 body {
-    font-family: "Squada One", "cursive", "Noto Sans TC", "sans-serif";
-    background-color: $light;
+  font-family: "Noto Sans TC", "Squada One", cursive, sans-serif;  //注意"Squada One"優先的話，search文字會跑版
+  overflow-x: hidden;
 }
 
 img {
-    object-fit: cover; // 防止圖片變形
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
-
-a {
-    text-decoration: none;
-    color: $black;
-}
-
 
 ul {
-  margin-bottom: 0;
   list-style: none;
   padding-left: 0;
 }
 
+a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+.table {
+  margin: 0;
+}
 
 html {
-  //網頁右測scoll欄
+  /*網頁右測scoll欄*/
   
   /* width */
   ::-webkit-scrollbar {

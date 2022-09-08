@@ -1,12 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap");
-
 @import "../../../node_modules/bootstrap/scss/functions";
 @import "./helpers/variables";
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 
-@import './mixin/mixin';
-@import './base/base';
+@import './mixin/mixin';  //rwd
+@import './base/base';    //全域設定
+@import './utilities/utilities';  //自訂class
+
+@import "./components/button";
+@import "./components/card";
+@import "./components/hover";
+
+@import "./vendors/swiper";
+
 @import './layout/layout';
+
 @import './pages/index';
-@import './utilities/utilities';

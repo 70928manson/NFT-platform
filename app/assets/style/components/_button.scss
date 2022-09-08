@@ -1,0 +1,82 @@
+.btn-more {
+    padding: 8px 48px;
+    border: 1px solid $dark;
+    font-size: 18px;
+    font-family: 'Squada One', cursive;
+    line-height: 1;
+    position: relative;
+    transition: all .15s ease-in-out;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 16px 16px;
+        border-color: transparent transparent $primary transparent;
+        bottom: 0;
+        right: 0;
+    }
+
+    &:hover {
+        background-color: $primary;
+        color: $light;
+
+        &::after {
+            border-color: transparent transparent $dark transparent;
+        }
+    }
+}
+
+.btn-more-light {
+    background-color: $light;
+    color: $dark;
+
+    &:hover {
+        background-color: $primary;
+        color: $light;
+    }
+}
+
+.btn-plus {
+    width: 0;
+    height: 0;
+    padding: 0;
+    border-style: solid;
+    border-width: 0 0 32px 32px;
+    border-color: transparent transparent #000000 transparent;
+
+    &:focus {
+        box-shadow: none;
+    }
+
+    &::before {
+        content: '+';
+        position: absolute;
+        color: $light;
+        width: 10px;
+        height: 10px;
+        bottom: -20px;
+        right: 4px;
+    }
+
+    &.active {
+        width: 0;
+        height: 0;
+        padding: 0;
+        border-style: solid;
+        border-width: 0 0 32px 32px;
+        border-color: transparent transparent $primary transparent;
+
+        &::before {
+            content: '–';
+            position: absolute;
+            color: $light;
+            width: 10px;
+            height: 10px;
+            bottom: -20px;
+            right: 4px;
+        }
+    }
+}
