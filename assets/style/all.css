@@ -14937,41 +14937,38 @@ html ::-webkit-scrollbar-thumb:hover {
   line-height: 1.13;
 }
 
-.mb-triangle {
-  margin: 0 0 -0.2px 0;
-}
-
 .btn-more {
   padding: 8px 48px;
-  border: 1px solid #000;
-  font-size: 18px;
+  border: 0.8px solid #000;
+  font-size: 1.125rem;
   font-family: 'Squada One', cursive;
-  line-height: 1;
-  position: relative;
+  display: inline-block;
+  line-height: 19px;
   -webkit-transition: all .15s ease-in-out;
   -o-transition: all .15s ease-in-out;
   transition: all .15s ease-in-out;
 }
 
-.btn-more::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 0 16px 16px;
-  border-color: transparent transparent #e6553b transparent;
-  bottom: 0;
-  right: 0;
+.btn-triangle {
+  position: relative;
 }
 
-.btn-more:hover {
+.btn-triangle::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-left: 16px transparent solid;
+  border-bottom: 16px #E6553B solid;
+}
+
+.btn-triangle:hover {
   background-color: #e6553b;
   color: #fff;
 }
 
-.btn-more:hover::after {
-  border-color: transparent transparent #000 transparent;
+.btn-triangle:hover::after {
+  border-bottom: 16px solid #000;
 }
 
 .btn-more-light {
@@ -15497,6 +15494,16 @@ html ::-webkit-scrollbar-thumb:hover {
   border-color: transparent transparent #e6553b transparent;
   bottom: 0;
   right: 0;
+}
+
+.title-more {
+  border: 1px solid transparent;
+  margin: 0 -0.2px -1.2px 0;
+}
+
+.title-more:hover {
+  border: 1px solid #000;
+  margin: 0 -0.2px -1.35px 0;
 }
 
 .join-title::before {
