@@ -14851,7 +14851,7 @@ html {
 }
 
 html ::-webkit-scrollbar {
-  width: 5px;
+  width: 10px;
 }
 
 html ::-webkit-scrollbar-track {
@@ -14860,6 +14860,7 @@ html ::-webkit-scrollbar-track {
 
 html ::-webkit-scrollbar-thumb {
   background: #e6553b;
+  border-radius: 30px;
 }
 
 html ::-webkit-scrollbar-thumb:hover {
@@ -14934,6 +14935,10 @@ html ::-webkit-scrollbar-thumb:hover {
 
 .lh-md {
   line-height: 1.13;
+}
+
+.mb-triangle {
+  margin: 0 0 -0.2px 0;
 }
 
 .btn-more {
@@ -15354,6 +15359,14 @@ html ::-webkit-scrollbar-thumb:hover {
   }
 }
 
+.ranking-top-hover:hover {
+  cursor: pointer;
+}
+
+.ranking-top-hover:hover .ranking-top-img-filter {
+  opacity: .7;
+}
+
 .ranking-top-img {
   height: 374px;
   border-bottom: 1px solid #000;
@@ -15431,6 +15444,14 @@ html ::-webkit-scrollbar-thumb:hover {
 
 .ranking-btn:hover + .ranking-top-img-filter {
   opacity: .5;
+}
+
+.ranking-bottom-hover:hover {
+  cursor: pointer;
+}
+
+.ranking-bottom-hover:hover .ranking-bottom-img-filter {
+  opacity: .7;
 }
 
 .ranking-bottom:hover .ranking-bottom-img-filter {
