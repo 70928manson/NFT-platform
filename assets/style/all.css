@@ -14855,7 +14855,7 @@ html ::-webkit-scrollbar {
 }
 
 html ::-webkit-scrollbar-track {
-  background: #000;
+  background: #f0f0f0;
 }
 
 html ::-webkit-scrollbar-thumb {
