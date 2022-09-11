@@ -1,21 +1,22 @@
 .btn-more {
     padding: 8px 48px;
-    border: 1px solid $dark;
-    font-size: 18px;
+    border: .8px solid $dark;
+    font-size: 1.125rem;
     font-family: 'Squada One', cursive;
-    line-height: 1;
-    position: relative;
+    display: inline-block;
+    line-height: 19px;
     transition: all .15s ease-in-out;
+}
+
+.btn-triangle  {
+    position: relative;
     &::after {
         content: '';
         position: absolute;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 0 0 16px 16px;
-        border-color: transparent transparent $primary transparent;
-        bottom: 0;
         right: 0;
+        bottom: 0;
+        border-left: 16px transparent solid;
+        border-bottom: 16px #E6553B solid;
     }
 
     &:hover {
@@ -23,10 +24,10 @@
         color: $light;
 
         &::after {
-            border-color: transparent transparent $dark transparent;
+            border-bottom: 16px solid $dark;
         }
     }
-}
+  }
 
 .btn-more-light {
     background-color: $light;

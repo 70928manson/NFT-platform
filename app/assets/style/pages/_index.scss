@@ -167,6 +167,15 @@
   }
 }
 
+.title-more {
+  border: 1px solid transparent;
+  margin: 0 -0.2px -1.2px 0;  //不讓三角形跑掉
+}
+.title-more:hover {
+  border: 1px solid #000;
+  margin: 0 -0.2px -1.35px 0;  //不讓三角形跑掉
+}
+
 // join
 .join-title::before {
   content: '';
