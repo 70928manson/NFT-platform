@@ -40,6 +40,12 @@
 }
 
 // ranking
+.ranking-top-hover:hover {
+  cursor: pointer;
+  .ranking-top-img-filter {
+    opacity: .7;
+}
+}
 .ranking-top-img {
   height: 374px;
   border-bottom: 1px solid $dark;
@@ -109,6 +115,13 @@
   &:hover+.ranking-top-img-filter {
       opacity: .5;
   }
+}
+
+.ranking-bottom-hover:hover {
+  cursor: pointer;
+  .ranking-bottom-img-filter {
+    opacity: .7;
+}
 }
 
 .ranking-bottom:hover {
